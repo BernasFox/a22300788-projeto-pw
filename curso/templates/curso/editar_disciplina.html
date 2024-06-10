@@ -1,0 +1,14 @@
+{% extends 'curso/layout.html' %}
+
+{% block title %}
+Editar Disciplina
+{% endblock %}
+
+{% block content %}
+    <h1>Editar Disciplina</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Salvar</button>
+    </form>
+{% endblock %}

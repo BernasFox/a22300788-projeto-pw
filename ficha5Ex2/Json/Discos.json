@@ -1,0 +1,182 @@
+{
+  "discos": [
+    {
+      "banda": "The Beatles",
+      "titulo": "Abbey Road",
+      "ano_lancamento": 1969,
+      "musicas": [
+        {"titulo": "Come Together", "duracao": "4:20"},
+        {"titulo": "Something", "duracao": "3:03"},
+        {"titulo": "Maxwell's Silver Hammer", "duracao": "3:27"},
+        {"titulo": "Oh! Darling", "duracao": "3:26"},
+        {"titulo": "Octopus's Garden", "duracao": "2:51"},
+        {"titulo": "I Want You (She's So Heavy)", "duracao": "7:47"},
+        {"titulo": "Here Comes the Sun", "duracao": "3:05"},
+        {"titulo": "Because", "duracao": "2:45"},
+        {"titulo": "You Never Give Me Your Money", "duracao": "4:02"},
+        {"titulo": "Sun King", "duracao": "2:26"},
+        {"titulo": "Mean Mr. Mustard", "duracao": "1:06"},
+        {"titulo": "Polythene Pam", "duracao": "1:12"},
+        {"titulo": "She Came In Through the Bathroom Window", "duracao": "1:57"},
+        {"titulo": "Golden Slumbers", "duracao": "1:31"},
+        {"titulo": "Carry That Weight", "duracao": "1:36"},
+        {"titulo": "The End", "duracao": "2:05"},
+        {"titulo": "Her Majesty", "duracao": "0:23"}
+      ]
+    },
+    {
+      "banda": "Led Zeppelin",
+      "titulo": "Led Zeppelin IV",
+      "ano_lancamento": 1971,
+      "musicas": [
+        {"titulo": "Black Dog", "duracao": "4:54"},
+        {"titulo": "Rock and Roll", "duracao": "3:40"},
+        {"titulo": "The Battle of Evermore", "duracao": "5:51"},
+        {"titulo": "Stairway to Heaven", "duracao": "8:02"},
+        {"titulo": "Misty Mountain Hop", "duracao": "4:39"},
+        {"titulo": "Four Sticks", "duracao": "4:44"},
+        {"titulo": "Going to California", "duracao": "3:31"},
+        {"titulo": "When the Levee Breaks", "duracao": "7:08"}
+      ]
+    },
+    {
+      "banda": "The Rolling Stones",
+      "titulo": "Sticky Fingers",
+      "ano_lancamento": 1971,
+      "musicas": [
+        {"titulo": "Brown Sugar", "duracao": "3:49"},
+        {"titulo": "Sway", "duracao": "3:50"},
+        {"titulo": "Wild Horses", "duracao": "5:41"},
+        {"titulo": "Can't You Hear Me Knocking", "duracao": "7:14"},
+        {"titulo": "You Gotta Move", "duracao": "2:32"},
+        {"titulo": "Bitch", "duracao": "3:37"},
+        {"titulo": "I Got the Blues", "duracao": "3:54"},
+        {"titulo": "Sister Morphine", "duracao": "5:34"},
+        {"titulo": "Dead Flowers", "duracao": "4:05"},
+        {"titulo": "Moonlight Mile", "duracao": "5:56"}
+      ]
+    },
+    {
+      "banda": "Queen",
+      "titulo": "A Night at the Opera",
+      "ano_lancamento": 1975,
+      "musicas": [
+        {"titulo": "Death on Two Legs (Dedicated to...)", "duracao": "3:43"},
+        {"titulo": "Lazing on a Sunday Afternoon", "duracao": "1:07"},
+        {"titulo": "I'm in Love with My Car", "duracao": "3:05"},
+        {"titulo": "You're My Best Friend", "duracao": "2:52"},
+        {"titulo": "'39", "duracao": "3:30"},
+        {"titulo": "Sweet Lady", "duracao": "4:03"},
+        {"titulo": "Seaside Rendezvous", "duracao": "2:15"},
+        {"titulo": "The Prophet's Song", "duracao": "8:21"},
+        {"titulo": "Love of My Life", "duracao": "3:38"},
+        {"titulo": "Good Company", "duracao": "3:26"},
+        {"titulo": "Bohemian Rhapsody", "duracao": "5:55"},
+        {"titulo": "God Save the Queen", "duracao": "1:15"}
+      ]
+    },
+    {
+      "banda": "Pink Floyd",
+      "titulo": "The Dark Side of the Moon",
+      "ano_lancamento": 1973,
+      "musicas": [
+        {"titulo": "Speak to Me", "duracao": "1:30"},
+        {"titulo": "Breathe", "duracao": "2:43"},
+        {"titulo": "On the Run", "duracao": "3:35"},
+        {"titulo": "Time", "duracao": "6:53"},
+        {"titulo": "The Great Gig in the Sky", "duracao": "4:15"},
+        {"titulo": "Money", "duracao": "6:30"},
+        {"titulo": "Us and Them", "duracao": "7:51"},
+        {"titulo": "Any Colour You Like", "duracao": "3:24"},
+        {"titulo": "Brain Damage", "duracao": "3:50"},
+        {"titulo": "Eclipse", "duracao": "2:03"}
+      ]
+    },
+    {
+      "banda": "The Who",
+      "titulo": "Who's Next",
+      "ano_lancamento": 1971,
+      "musicas": [
+        {"titulo": "Baba O'Riley", "duracao": "5:08"},
+        {"titulo": "Bargain", "duracao": "5:33"},
+        {"titulo": "Love Ain't for Keeping", "duracao": "2:10"},
+        {"titulo": "My Wife", "duracao": "3:41"},
+        {"titulo": "The Song Is Over", "duracao": "6:16"},
+        {"titulo": "Getting in Tune", "duracao": "4:50"},
+        {"titulo": "Going Mobile", "duracao": "3:43"},
+        {"titulo": "Behind Blue Eyes", "duracao": "3:42"},
+        {"titulo": "Won't Get Fooled Again", "duracao": "8:32"}
+      ]
+    },
+    {
+      "banda": "AC/DC",
+      "titulo": "Back in Black",
+      "ano_lancamento": 1980,
+      "musicas": [
+        {"titulo": "Hells Bells", "duracao": "5:12"},
+        {"titulo": "Shoot to Thrill", "duracao": "5:17"},
+        {"titulo": "What Do You Do for Money Honey", "duracao": "3:36"},
+        {"titulo": "Givin the Dog a Bone", "duracao": "3:31"},
+        {"titulo": "Let Me Put My Love into You", "duracao": "4:15"},
+        {"titulo": "Back in Black", "duracao": "4:15"},
+        {"titulo": "You Shook Me All Night Long", "duracao": "3:30"},
+        {"titulo": "Have a Drink on Me", "duracao": "3:57"},
+        {"titulo": "Shake a Leg", "duracao": "4:06"},
+        {"titulo": "Rock and Roll Ain't Noise Pollution", "duracao": "4:15"}
+      ]
+    },
+    {
+      "banda": "Black Sabbath",
+      "titulo": "Paranoid",
+      "ano_lancamento": 1970,
+      "musicas": [
+        {"titulo": "War Pigs", "duracao": "7:57"},
+        {"titulo": "Paranoid", "duracao": "2:50"},
+        {"titulo": "Planet Caravan", "duracao": "4:32"},
+        {"titulo": "Iron Man", "duracao": "5:56"},
+        {"titulo": "Electric Funeral", "duracao": "4:49"},
+        {"titulo": "Hand of Doom", "duracao": "7:08"},
+        {"titulo": "Rat Salad", "duracao": "2:30"},
+        {"titulo": "Fairies Wear Boots", "duracao": "6:15"}
+      ]
+    },
+    {
+      "banda": "Metallica",
+      "titulo": "Metallica (Black Album)",
+      "ano_lancamento": 1991,
+      "musicas": [
+        {"titulo": "Enter Sandman", "duracao": "5:32"},
+        {"titulo": "Sad but True", "duracao": "5:24"},
+        {"titulo": "Holier Than Thou", "duracao": "3:47"},
+        {"titulo": "The Unforgiven", "duracao": "6:27"},
+        {"titulo": "Wherever I May Roam", "duracao": "6:42"},
+        {"titulo": "Don't Tread on Me", "duracao": "3:59"},
+        {"titulo": "Through the Never", "duracao": "4:01"},
+        {"titulo": "Nothing Else Matters", "duracao": "6:29"},
+        {"titulo": "Of Wolf and Man", "duracao": "4:16"},
+        {"titulo": "The God That Failed", "duracao": "5:05"},
+        {"titulo": "My Friend of Misery", "duracao": "6:47"},
+        {"titulo": "The Struggle Within", "duracao": "3:51"}
+      ]
+    },
+    {
+      "banda": "Nirvana",
+      "titulo": "Nevermind",
+      "ano_lancamento": 1991,
+      "musicas": [
+        {"titulo": "Smells Like Teen Spirit", "duracao": "5:01"},
+        {"titulo": "In Bloom", "duracao": "4:14"},
+        {"titulo": "Come as You Are", "duracao": "3:38"},
+        {"titulo": "Breed", "duracao": "3:03"},
+        {"titulo": "Lithium", "duracao": "4:17"},
+        {"titulo": "Polly", "duracao": "2:56"},
+        {"titulo": "Territorial Pissings", "duracao": "2:23"},
+        {"titulo": "Drain You", "duracao": "3:44"},
+        {"titulo": "Lounge Act", "duracao": "2:36"},
+        {"titulo": "Stay Away", "duracao": "3:33"},
+        {"titulo": "On a Plain", "duracao": "3:16"},
+        {"titulo": "Something in the Way", "duracao": "3:51"}
+      ]
+    }
+  ]
+}

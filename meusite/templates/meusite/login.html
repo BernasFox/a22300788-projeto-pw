@@ -1,0 +1,20 @@
+{% extends 'meusite/layout.html' %}
+{% block header %}Login{% endblock %}
+
+
+{% block title %}Login{% endblock %}
+{% block content %}
+    <section>
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
+        <br>
+        <!-- <a href="{% url 'meusite:password_reset' %}"><button>Esqueceu sua senha?</button></a> -->
+    </section>
+{% endblock %}

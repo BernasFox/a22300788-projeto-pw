@@ -1,0 +1,24 @@
+{% extends 'curso/layout.html' %}
+
+{% block title %}
+Projetos das Disciplinas
+{% endblock %}
+
+{% block content %}
+<h1>Projetos das Disciplinas</h1>
+<ul>
+    {% for projeto in projetos %}
+    <li>Nome do Projeto: {{ projeto.nome_projeto }}</li>
+    <ul>
+        <li>Descrição: {{ projeto.descricao }}</li>
+        <br>
+        <li>Conceitos Aplicados: {{ projeto.conceitos_aplicados }}</li>
+        <br>
+        <li>Tecnologias Usadas: {{ projeto.tecnologias_usadas }}</li>
+        <br>
+        <li>Disciplina: {{ projeto.disciplina.nome }}</li>
+        <br>
+    </ul>
+    {% endfor %}
+</ul>
+{% endblock %}

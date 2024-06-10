@@ -1,0 +1,53 @@
+{
+  "bandas": [
+    {
+      "nome": "The Beatles",
+      "foto": "https://i.scdn.co/image/ab67616d0000b27357a3a90161f99a5a451665d3"
+    },
+    {
+      "nome": "Queen",
+      "foto": "https://i.scdn.co/image/ab67616d0000b2738d07a0fe35c9d20da01997f7"
+    },
+    {
+      "nome": "Led Zeppelin",
+      "foto": "https://i.scdn.co/image/ab67616d0000b2733893b4e6a2a4140de0f787d7"
+    }
+  ],
+  "albuns": [
+    {
+      "nome": "Abbey Road",
+      "banda": "The Beatles",
+      "capa": "https://i.scdn.co/image/ab67616d0000b27357a3a90161f99a5a451665d3"
+    },
+    {
+      "nome": "A Night at the Opera",
+      "banda": "Queen",
+      "capa": "https://i.scdn.co/image/ab67616d0000b2738d07a0fe35c9d20da01997f7"
+    },
+    {
+      "nome": "Led Zeppelin IV",
+      "banda": "Led Zeppelin",
+      "capa": "https://i.scdn.co/image/ab67616d0000b2733893b4e6a2a4140de0f787d7"
+    }
+  ],
+  "musicas": [
+    {
+      "titulo": "Hey Jude",
+      "album": "Abbey Road",
+      "link": "https://open.spotify.com/track/4kFLaFwqKbVuv6Pw8Tfuzp",
+      "foto": "https://i.scdn.co/image/ab67616d0000b27357a3a90161f99a5a451665d3"
+    },
+    {
+      "titulo": "Bohemian Rhapsody",
+      "album": "A Night at the Opera",
+      "link": "https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J",
+      "foto": "https://i.scdn.co/image/ab67616d0000b2738d07a0fe35c9d20da01997f7"
+    },
+    {
+      "titulo": "Stairway to Heaven",
+      "album": "Led Zeppelin IV",
+      "link": "https://open.spotify.com/track/5CQ30WqJwcep0pYcV4AMNc",
+      "foto": "https://i.scdn.co/image/ab67616d0000b2733893b4e6a2a4140de0f787d7"
+    }
+  ]
+}

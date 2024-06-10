@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Projeto Artigos</h1>
+    <nav>
+        <li><a href="{% url 'artigos:artigos' %}">Artigos</a></li>
+        <li><a href="{% url 'artigos:autores' %}">Autores</a></li>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

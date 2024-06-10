@@ -1,0 +1,11 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h1>Editar {{tipo}}</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">Salvar</button>
+    </form>
+    <a href="{% url 'bandas:apagar_data' tipo data.id %}"><button class="remove" >Apagar</button></a>
+{% endblock %}

@@ -1,0 +1,54 @@
+{
+  "bandas": [
+    {
+      "nome": "The Beatles",
+      "ano_criacao": 1960,
+      "nacionalidade": "Inglaterra"
+    },
+    {
+      "nome": "Led Zeppelin",
+      "ano_criacao": 1968,
+      "nacionalidade": "Inglaterra"
+    },
+    {
+      "nome": "The Rolling Stones",
+      "ano_criacao": 1962,
+      "nacionalidade": "Inglaterra"
+    },
+    {
+      "nome": "Queen",
+      "ano_criacao": 1970,
+      "nacionalidade": "Inglaterra"
+    },
+    {
+      "nome": "Pink Floyd",
+      "ano_criacao": 1965,
+      "nacionalidade": "Inglaterra"
+    },
+    {
+      "nome": "The Who",
+      "ano_criacao": 1964,
+      "nacionalidade": "Inglaterra"
+    },
+    {
+      "nome": "AC/DC",
+      "ano_criacao": 1973,
+      "nacionalidade": "Austrália"
+    },
+    {
+      "nome": "Black Sabbath",
+      "ano_criacao": 1968,
+      "nacionalidade": "Inglaterra"
+    },
+    {
+      "nome": "Metallica",
+      "ano_criacao": 1981,
+      "nacionalidade": "Estados Unidos"
+    },
+    {
+      "nome": "Nirvana",
+      "ano_criacao": 1987,
+      "nacionalidade": "Estados Unidos"
+    }
+  ]
+}

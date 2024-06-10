@@ -1,0 +1,18 @@
+{% extends 'autenticacao/layout.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+        <br>
+        <br>
+
+    </form>
+    <a href="{% url 'password_reset' %}"><button>Esqueceu sua senha?</button></a>
+
+{% endblock %}

@@ -1,0 +1,310 @@
+/*  python manage.py collectstatic  */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+.scroll {
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+    max-height: 50vh; /* Limita a altura máxima a 50% da altura da tela */
+    width: 100%; /* Garante que a largura da barra de rolagem não ultrapasse a largura da tela */
+    padding-right: 20px; /* Adiciona espaço para a barra de rolagem para evitar recorte de conteúdo */
+    box-sizing: content-box; /* Garante que a largura não inclua o espaço da barra de rolagem */
+
+}
+
+.scroll ::-webkit-scrollbar {
+  display: none;
+}
+
+
+img {
+    width: 30px;
+    max-width: 30%;
+
+}
+
+header {
+    background-color: #34495E;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    background-color: #34495E;
+    display: flex;
+    flex-direction: row; /* Alinha itens na horizontal */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a:hover.red {
+    background-color: red;
+    color: white;
+}
+
+nav a:hover.green {
+    background-color: green;
+    color: white;
+}
+
+div {
+    display: flex;
+    flex-direction: row; /* Alinha itens na horizontal */
+    width: 100%;
+}
+
+div a:last-child {
+    margin-left: auto;
+    border-radius: 25px;
+}
+
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+ul.buttons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+ul.buttons li {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button.remove {
+    background-color: #E74C3C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.remove:hover {
+    background-color: #C0392B;
+}
+
+p.biografia {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 75%;
+    max-width: 300px;
+}
+
+.helptext {
+    font-size: 14px;
+    color: #666;
+    padding: 10px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.data_button {
+    display: inline-block;
+    padding: 10px 0;
+    background-color: #FF5733;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    width: 50%;
+    max-width: 150px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.data_button:hover {
+    background-color: #FF8C42;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+    background-color: #34495E;
+    color: white;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 90%;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+.menu-toggle:hover{
+    background-color: #34495E;
+}
+
+
+.menu-toggle.scrolled {
+    opacity: 0.2;
+}
+
+.menu-toggle.scrolled:hover{
+    opacity: 1;
+}
+
+
+.right-link a {
+    margin-left: auto;
+    border-radius: 25px;
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão do menu em telas pequenas */
+    }
+
+
+    .scroll {
+        overflow-y: scroll; //se realmente quer impedir que tenha uma barra horizontal.
+        overflow-x: hidden; //pode-se usar auto para deixar o browser decidir quando usar.
+        white-space: nowrap; //n]ao deixa quebrar a linha
+        overflow: hidden;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+    .right-link {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #34495E;
+        padding-top: 60px;
+        z-index: 1000;
+        opacity: 0.95;
+    }
+
+    nav a:hover{
+        background-color: #333;
+        color: white;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column; /* Alinha itens na horizontal */
+        width: 100%;
+    }
+
+
+    div a:last-child {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+    }
+
+
+    nav a:hover.green {
+        background-color: #34495E;
+        color: orange;
+    }
+
+    nav a:hover.red {
+        background-color: #34495E;
+        color: orange;
+    }
+
+    section{
+        max-width: 75%;
+    }
+
+    nav a:hover {
+        background-color: #34495E;
+        color: orange;
+    }
+}

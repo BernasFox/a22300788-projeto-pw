@@ -1,0 +1,16 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <p>Existe(m) {{ data|length }} banda(s):</p>
+    <ul class="buttons">
+    {% for banda in data %}
+        <li>
+            {{banda}}<a href="{% url 'bandas:apagar_data' banda.id tipo %}">
+
+            <button class='remove'>Apagar</button></a>
+        </li>
+    {% endfor %}
+    </ul>
+    <br>
+    <br>
+{% endblock %}

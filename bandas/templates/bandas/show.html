@@ -1,0 +1,91 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+{{ nome }}
+{% if tipo == 'banda' %}
+    <h3>{{ data }}</h3>
+    {% if data.foto %}
+        <img src='{{ data.foto.url }}' width="150px">
+    {% else %}
+        <p>Sem imagem!</p>
+    {% endif %}
+
+    <h3>Albuns:</h3>
+    <ul class="buttons">
+        {% for album in data.album.all|dictsort:"nome" %}
+            <li>
+                <a href="{% url 'bandas:show' 'album' album.id %}">
+                    <button class="data_button">{{ album }}</button>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if data.album.all|length <= 0 %}
+        <p>A banda ainda não possui albuns!</p>
+    {% endif %}
+    <br><br>
+    {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+            <a href="{% url 'bandas:edit' 'banda' id %}">
+                <button class="button">Editar Banda</button>
+            </a>
+        {% endif %}
+    {% endif %}
+
+{% elif tipo == 'album' %}
+    <h3>Album: {{ data.nome }}</h3>
+    {% if data.capa %}
+        <img src='{{ data.capa.url }}' width="150px">
+    {% else %}
+        <p>Sem imagem!</p>
+    {% endif %}
+
+    <h3>Lista de músicas do álbum:</h3>
+    <ul class="buttons">
+        {% for musica in data.musicas.all|dictsort:"titulo" %}
+            <li><a href="{% url 'bandas:show' 'musica' musica.id %}"><button class="data_button">{{ musica }}</button></a></li>
+        {% endfor %}
+    </ul>
+    {% if data.musicas.all|length <= 0 %}
+        <p>O Album ainda não possui musicas!</p>
+    {% endif %}
+    <br><br>
+    {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+            <a href="{% url 'bandas:edit' tipo='album' id_data=data.id %}"><button class="button">Editar Álbum</button></a>
+        {% endif %}
+    {% endif %}
+
+{% elif tipo == 'musica' %}
+    <h3>Música: {{ data }}  </h3>
+    {% if data.foto %}
+        <img src='{{ data.foto.url }}' width="150px">
+    {% else %}
+        <p>Sem imagem!</p>
+    {% endif %}
+
+
+    <h3>Biografia:</h3>
+    {% if data.biografia != None %}
+        <p class="biografia">{{ data.biografia}} </p>
+    {% else %}
+        <p>Sem Biografia!</p>
+    {% endif %}
+
+    <h3>Link:
+    <br>
+    {% if data.link != "" %}
+        <a href="{{ data.link }}" target="_blank"><button class="data_button">Ouvir</button></a>
+    {% else %}
+        <p>Sem Link!</p>
+    {% endif %}
+    </h3>
+
+    <br>
+    {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+            <a href="{% url 'bandas:edit' 'musica' data.id %}"><button class="button">Editar Música</button></a>
+        {% endif %}
+    {% endif %}
+{% endif %}
+{% endblock %}

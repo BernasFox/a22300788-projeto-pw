@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Cursos 📜</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/css-curso.css' %}">
+</head>
+<body>
+    <header>
+        <h1>📜 Cursos 📜</h1>
+    </header>
+    <main>
+        <nav>
+            {% if user.is_authenticated %}
+                <div class="user-box">
+                    Bem-vindo, {{ user.username }}
+                </div>
+                <br>
+                <br>
+                <a href="{% url 'curso:listar_cursos' %}">Cursos</a>
+                <a href="{% url 'curso:listar_docentes' %}">Docentes</a>
+                <a href="{% url 'curso:logout' %}" class='red'>Logout</a>
+            {% else %}
+                <a href="{% url 'curso:listar_cursos' %}">Cursos</a>
+                <a href="{% url 'curso:listar_docentes' %}">Docentes</a>
+                <a href="{% url 'curso:login' %}" class='green'>Login</a>
+            {% endif %}
+        </nav>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+</body>
+</html>

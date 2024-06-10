@@ -1,0 +1,55 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    {% if tipo == 'banda' %}
+        <p>Existe(m) {{ data|length }} banda(s):</p>
+        <ul class="buttons">
+        {% for banda in data %}
+            <li>
+                <a href="{% url 'bandas:show' 'banda' banda.id %}"><button  class="data_button">{{ banda }}</button></a>
+            </li>
+        {% endfor %}
+        </ul>
+        <br>
+        <br>
+        {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+                <a href="{% url 'bandas:inserir' 'banda' %}"><button>Inserir Banda</button></a>
+            {% endif%}
+        {% endif%}
+
+    {% elif tipo == 'album' %}
+        <p>Existe(m) {{ data|length }} album(ns):</p>
+        <ul class="buttons">
+        {% for album in data %}
+            <li>
+                <a href="{% url 'bandas:show' 'album' album.id %}"><button  class="data_button">{{ album }}</button></a>
+            </li>
+        {% endfor %}
+        </ul>
+        <br>
+        <br>
+        {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+                <a href="{% url 'bandas:inserir' 'album' %}"><button>Inserir Album</button></a>
+            {% endif%}
+        {% endif%}
+
+    {% elif tipo == 'musica' %}
+        <p>Existe(m) {{ data|length }} musica(s):</p>
+        <ul class="buttons">
+        {% for musica in data %}
+            <li>
+                <a href="{% url 'bandas:show' 'musica' musica.id %}"><button  class="data_button">{{ musica }}</button></a>
+            </li>
+        {% endfor %}
+        </ul>
+        <br>
+        <br>
+        {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+               <a href="{% url 'bandas:inserir' 'musica' %}"><button>Inserir Musica</button></a>
+            {% endif%}
+        {% endif%}
+    {% endif %}
+{% endblock %}

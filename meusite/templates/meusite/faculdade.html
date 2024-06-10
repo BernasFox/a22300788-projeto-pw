@@ -1,0 +1,22 @@
+{% extends 'meusite/layout.html' %}
+{% block header %}Faculdade{% endblock %}
+
+{% block content %}
+    <!-- Site -->
+    <section>
+        <p>Programas:</p>
+            <ul class="buttons">
+                {% for trabalho in programas %}
+                    <li><a href="{{ trabalho.get_absolute_url }}" target="_blank"><button class="data_button">{{ trabalho.nome }}</button></a></li>
+                {% endfor %}
+            </ul>
+
+            <p>Sites:</p>
+            <ul class="buttons">
+                {% for trabalho in sites %}
+                    <li><a href="{{ trabalho.get_absolute_url }}" target="_blank"><button class="data_button">{{ trabalho.nome }}</button></a></li>
+                {% endfor %}
+            </ul>
+
+    </section>
+{% endblock %}

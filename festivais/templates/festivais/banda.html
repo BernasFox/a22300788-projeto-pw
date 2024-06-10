@@ -1,0 +1,13 @@
+{% extends 'festivais/layout.html' %}
+
+{% block content %}
+    <section>
+        {{ festival }}
+        <ul>
+            {% for banda in festival.bandas.all %}
+            <li>{{ banda.nome}}</li>
+            {% endfor %}
+        </ul>
+        {{Banda.imagem}}
+    </section>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'curso/layout.html' %}
+
+{% block title %}
+Detalhes do Projeto: {{ projeto.nome_projeto }}
+{% endblock %}
+
+{% block content %}
+<h1>Detalhes do Projeto: {{ projeto.nome_projeto }}</h1>
+<ul>
+    <li>Descrição: {{ projeto.descricao }}</li>
+    <li>Conceitos Aplicados: {{ projeto.conceitos_aplicados }}</li>
+    <li>Tecnologias Usadas: {{ projeto.tecnologias_usadas }}</li>
+</ul>
+{% endblock %}

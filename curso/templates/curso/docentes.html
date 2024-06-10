@@ -1,0 +1,29 @@
+{% extends 'curso/layout.html' %}
+
+{% block title %}
+Lista de Docentes
+{% endblock %}
+
+{% block content %}
+<h1>Lista de Docentes</h1>
+<ul>
+    {% for docente in docentes %}
+    <li>
+        {{ docente.nome }}
+        {% if user.is_authenticated %}
+            <a href="{% url 'curso:editar_docente' docente.id %}"><button>Editar</button></a></li>
+        {% endif %}
+    </li>
+    <ul>
+        <li>Disciplinas:
+            <ul>
+                {% for disciplina in docente.disciplinas.all %}
+                    <li>{{ disciplina.nome }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+    <p>Existem {{ data|length }} autores:</p>
+    <ul>
+    {% for autor in data %}
+        <li>
+            <a href="{% url 'artigos:artigos' %}">{{ autor }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

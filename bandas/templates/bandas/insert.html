@@ -1,0 +1,27 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h1>Inserir {{tipo}}</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="hidden" name="tipo" value="{{ tipo }}">
+
+        {% if tipo == 'banda' %}
+            <label for="nome_banda">Nome da Banda:</label>
+            <input type="text" id="nome_banda" name="nome_banda" required>
+
+        {% elif tipo == 'album' %}
+            <label for="nome_album">Nome do Álbum:</label>
+            <input type="text" id="nome_album" name="nome_album" required>
+
+        {% elif tipo == 'musica' %}
+            <label for="titulo_musica">Título da Música:</label>
+            <input type="text" id="titulo_musica" name="titulo_musica" required>
+
+        {% endif %}
+
+        <input type="submit" value="Enviar">
+    </form>
+
+{% endblock %}

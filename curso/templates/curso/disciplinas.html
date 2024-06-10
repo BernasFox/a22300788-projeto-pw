@@ -1,0 +1,37 @@
+{% extends 'curso/layout.html' %}
+
+{% block title %}
+Disciplinas do Curso: {{ curso.nome }}
+{% endblock %}
+
+{% block content %}
+<h1>Disciplinas do Curso: {{ curso.nome }}</h1>
+<ul>
+    {% for disciplina in disciplinas %}
+    <li>{{ disciplina.nome }}
+        {% if user.is_authenticated %}
+            <a href="{% url 'curso:editar_disciplina' disciplina.id %}"><button>Editar</button></a></li>
+        {% endif %}
+    <ul>
+        <li>Ano: {{ disciplina.ano }}</li>
+        <br>
+        <li>Semestre: {{ disciplina.semestre }}</li>
+        <br>
+        <li>ECTS: {{ disciplina.ects }}</li>
+        <br>
+        <li>Curricular IUnit Readable Code: {{ disciplina.curricularIUnitReadableCode }}</li>
+        <br>
+        <li>Área Científica: {{ disciplina.area_cientifica.nome }}</li>
+        <br>
+        <li>Projetos:</li>
+        <ul>
+            {% for projeto in disciplina.projetos.all %}
+            <li><a href="{% url 'curso:detalhes_projeto' projeto.id %}">{{ projeto.nome }}</a></li>
+            <br>
+            {% endfor %}
+        </ul>
+    </ul>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock %}
